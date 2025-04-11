@@ -1,5 +1,6 @@
 import React from "react";
 import Character from "./Components/Character";
+import Button from "./Components/Button";
 
 const App = () => {
   return (
