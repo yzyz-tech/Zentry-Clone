@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import Button from "./Button";
+import { TiLocationArrow } from "react-icons/ti";
 
 const Character = () => {
   const [currentIndex, setCurrentIndex] = useState(1); // 当前播放视频索引（1-based）
@@ -72,7 +73,7 @@ const Character = () => {
               currentIndex === totalVideos - 1 ? 1 : currentIndex
               // 当前播放索引（1-based）
             )} // 根据索引切换视频
-            autoPlay
+            // autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
@@ -96,10 +97,18 @@ const Character = () => {
               <br /> Unleash the Play Economy
             </p>
 
-            <Button />
+            <Button
+              id="watch-trailer"
+              title="Watch Trailer"
+              leftIcon={<TiLocationArrow />}
+              ContainerClass="!bg-yellow-300 flex-center gap"
+            />
           </div>
         </div>
       </div>
+      <h1 className="special-font character-heading absolute bottom-5 right-5 text-black">
+        G<b>a</b>mi<b>n</b>g
+      </h1>
     </div>
   );
 };
