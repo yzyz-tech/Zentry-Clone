@@ -13,7 +13,7 @@ const Character = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 3; // 视频总数
+  const totalVideos = 4; // 视频总数
   const nextVideoRef = useRef(null); // 下一个视频的引用
 
   // 视频加载事件
@@ -32,7 +32,7 @@ const Character = () => {
 
   // 视频加载完成事件
   useEffect(() => {
-    if (loadedVideos === totalVideos) {
+    if (loadedVideos === totalVideos - 1) {
       setIsLoading(false);
     }
   }, [loadedVideos]);

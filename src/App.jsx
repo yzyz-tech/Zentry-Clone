@@ -1,6 +1,7 @@
 // import React from "react";
 import Character from "./Components/Character";
 import Button from "./Components/Button";
+import About from "./Components/About";
 
 const App = () => {
   return (
@@ -8,7 +9,8 @@ const App = () => {
       <Character />
 
       {/* 滚动后的第二个页面 */}
-      <section className="z-0 min-h-screen bg-blue-500" />
+      <About />
+      {/* <section className="z-0 min-h-screen bg-blue-500" /> */}
     </main>
   );
 };
