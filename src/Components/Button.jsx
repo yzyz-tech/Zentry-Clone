@@ -1,12 +1,12 @@
 import React from "react";
 // import { TiChartLine } from "react-icons/ti";
 
-const Button = ({ title, id, rightIcon, leftIcon, ContainerClass }) => {
+const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
   return (
     <button
       id={id} // 按钮的唯一标识符
-      className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 ${ContainerClass}`}
-      // 样式包括Character.jsx中自定义的ContainerClass
+      className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 ${containerClass}`}
+    // 样式包括Character.jsx中自定义的containerClass
     >
       {/* 渲染按钮左侧的图标 */}
       {leftIcon}

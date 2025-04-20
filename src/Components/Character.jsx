@@ -181,7 +181,7 @@ const Character = () => {
               id="watch-trailer"
               title="Watch Trailer"
               leftIcon={<TiLocationArrow />}
-              ContainerClass="!bg-yellow-300 flex-center gap-1"
+              containerClass="!bg-yellow-300 flex-center gap-1"
             />
           </div>
         </div>
