@@ -2,6 +2,7 @@ import Character from "./Components/Character";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Features from "./Components/Features";
+import Story from "./Components/Story";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Character />
       <About /> {/* 滚动后的第二个页面 */}
       <Features />
+      <Story />
     </main>
   );
 };
