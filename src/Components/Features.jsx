@@ -92,7 +92,6 @@ const Features = () => {
         {/* Bento 网格布局 */}
         {/* 第一行：单个横向大卡片 */}
         <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
-
           <Bentocard
             src="videos/feature-1.mp4"
             title={<>radia<b>n</b>t</>}

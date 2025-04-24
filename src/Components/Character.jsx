@@ -52,15 +52,16 @@ const Character = () => {
           width: "100%",
           height: "100%",
           duration: 1, // 动画持续1秒
-          ease: "power1.inOut", // 基于一次方程的缓动曲线，应用于动画开始与结束
+          ease: "power1.out", // 基于一次方程的缓动曲线，应用于动画开始与结束
           onStart: () => nextVideoRef.current.play(), // 开始动画时播放下一个视频
         });
 
-        // 当前视频元素，从0放大到中央小窗口
+        // 当前视频元素，放大到中央小窗口尺寸
         gsap.from("#current-video", {
           transformOrigin: "center center",
-          scale: 0, // 初始为完全缩小状态，由无到有
-          duration: 1.5,
+          scale: 1,
+          // scale: 0, // 初始为完全缩小状态，由无到有
+          duration: 0.5,
           ease: "power1.inOut",
         });
       }
@@ -121,7 +122,7 @@ const Character = () => {
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
             <div
               onClick={handleMiniVideoClick}
-              className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
+              className="origin-center scale-75 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
             >
               {/* 下一个视频元素（点击后切换） */}
               <video
@@ -153,7 +154,7 @@ const Character = () => {
               currentIndex === totalVideos - 1 ? 1 : currentIndex
               // 当前播放索引（1-based）
             )} // 根据索引切换视频
-            // autoPlay
+            autoPlay
             loop
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
@@ -163,7 +164,7 @@ const Character = () => {
 
         {/* 右下角标题 */}
         <h1 className="special-font character-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>a</b>mi<b>n</b>g
+          G<b>a</b>ming
         </h1>
 
         {/* 页面左上角文字介绍 */}

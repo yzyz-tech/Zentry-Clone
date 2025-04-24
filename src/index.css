@@ -131,7 +131,7 @@ body {
   }
 
   .sword-man-clip-path {
-    clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
+    clip-path: polygon(16% 20%, 85% 30%, 75% 96%, 5% 90%);
   }
 
   .contact-clip-path-1 {
@@ -140,6 +140,12 @@ body {
 
   .contact-clip-path-2 {
     clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+  }
+  .overlay-text {
+    color: rgb(237, 235, 235);
+    text-shadow: 0 0 2px rgba(255, 85, 0, 0.553);
+    position: relative;
+    z-index: 2;
   }
 }
 
